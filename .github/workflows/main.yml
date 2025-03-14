@@ -23,10 +23,4 @@ jobs:
           with:
             username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
-        - name: Build and push Docker image
-          uses: docker/build-push-action@v4
-          with:
-            platforms: linux/amd64, linux/arm64
-            context: .
-            push: true
-            tags: manon13380/api_platform_web:latest
+        
